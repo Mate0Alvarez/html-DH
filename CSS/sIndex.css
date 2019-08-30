@@ -1,0 +1,23 @@
+body{
+  background-image: url(../IMG/emilia-home.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+
+}
+a{
+  font-family: 'Raleway',sans-serif;
+}
+P{
+  font-family: 'Raleway', sans-serif;
+  padding-left: 15%;
+  padding-bottom: 5px;
+}
+p.titulo{
+  opacity: 0.5;
+}
+h1{
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 15%;
+  margin-left: 15%;
+}
