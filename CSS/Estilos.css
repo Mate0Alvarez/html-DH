@@ -8,6 +8,12 @@ h1{
   line-height: 46px;
   font-family: tahoma, Helvetica, sans-serif;
 }
+div.imagen{
+  width:100vw;
+}
+.imagen img{
+  width:100%;
+}
 h2{
   font-size: 25px;
   line-height: 38px;
