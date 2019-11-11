@@ -1,0 +1,22 @@
+{
+    "name": "lentech/botster-web",
+    "description": "The Botster website",
+    "license": "GPL-3.0",
+	"require": {
+		"php": ">=5.4.0",
+		"aura/sqlquery": "~2.1.0",
+        "kohana/core": "~3.3.0",
+        "kohana/cache": "~3.3.0"
+	},
+	"minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Lentech\\Botster\\": "src/"
+        }
+    },
+    "extra": {
+		"installer-paths": {
+			"vendor/{$vendor}/{$name}": ["type:kohana-module"]
+		}
+	}
+}

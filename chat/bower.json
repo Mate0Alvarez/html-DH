@@ -1,0 +1,6 @@
+{
+    "name": "botster",
+    "dependencies": {
+        "mustache": "2.0.0"
+    }
+}

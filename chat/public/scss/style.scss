@@ -1,0 +1,341 @@
+// Variables
+$container-width: 1000px;
+
+// Imports
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700);
+
+// Resets
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// Mixins
+@mixin invisible-a {
+	color: inherit;
+	
+	&:hover {
+		text-decoration: inherit;
+	}
+}
+
+// Abstract classes
+%container {
+	max-width: $container-width;
+	margin: 0 auto;
+}
+
+// Styles
+a {
+	text-decoration: none;
+	color: #3764BA;
+	
+	&:hover {
+		text-decoration: underline;
+	}
+	img {
+		border: 0;
+	}
+}
+input {
+	font: inherit;
+	color: inherit;
+}
+html {
+	height: 100%;
+	font-size: 100%;
+}
+body {
+	margin: 0;
+	height: 100%;
+	padding-top: 68px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	background-color: #76B9E2;
+	color: #303030;
+	
+	@media (min-width: 450px) and (min-height: 600px) {
+		padding-top: 84px;
+	}
+}
+header.main {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	width: 100%;
+	height: 68px;
+	padding: 10px 4%;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+	background-color: #fff;
+	
+	@media (min-width: 400px) and (min-height: 600px) {
+		height: 84px;
+	}
+	
+	.container {
+		@extend %container;
+		height: 100%;
+	}
+	.logo {
+		float: left;
+		width: 48px;
+		height: 100%;
+		
+		@media (min-width: 400px) and (min-height: 600px) {
+			width: 64px;
+		}
+		
+		img {
+			display: block;
+			height: 100%;
+		}
+	}
+	.title {
+		display: none;
+		
+		@media (min-width: 400px) {
+			display: block;
+			float: left;
+			margin-left: 20px;
+			margin-top: 23px;
+			font-size: 3rem;
+			text-transform: uppercase;
+			font-weight: 300;
+			line-height: 0;
+			
+			@media (min-height: 600px) {
+				margin-top: 30px;
+			}
+		}
+		
+		a {
+			@include invisible-a;
+		}
+	}
+	.menu-toggle {
+		float: right;
+		height: 32px;
+		margin-top: 8px;
+		
+		@media (min-width: 400px) and (min-height: 600px) {
+			height: 48px;
+			margin-top: 8px;
+		}
+		
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+.menu {
+	position: fixed;
+	z-index: 5;
+	width: 320px;
+	top: 68px;
+	right: -330px;
+	bottom: 0;
+	padding-bottom: 64px;
+	box-shadow: -2px 0 2px rgba(0, 0, 0, 0.1);
+	background-color: #d6efff;
+	overflow-y: auto;
+	
+	@media (min-width: 500px) {
+		top: 84px;
+	}
+	
+	.about {
+		padding: 6%;
+	}
+	footer.main {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 64px;
+		padding: 16px 6%;
+		
+		.github {
+			float: left;
+			
+			img {
+				display: block;
+				height: 100%;
+			}
+		}
+		.organisation {
+			float: right;
+			
+			img {
+				display: block;
+				height: 100%;
+			}
+		}
+	}
+}
+.app {
+	position: relative;
+	height: 100%;
+	padding: 0 4%;
+	
+	.warning {
+		display: none;
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		padding: 8%;
+		background-color: rgba(0, 0, 0, 0.7);
+
+		.message {
+			position: relative;
+			top: 25%;
+			max-width: 500px;
+			margin: 0 auto;
+			padding: 20px;
+			border-radius: 15px;
+			background-color: #FACE20;
+			
+			.hide-button {
+				float: right;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+			.title {
+				font-size: 1.2rem;
+				font-weight: bold;
+			}
+			.text {
+				margin-top: 10px;
+			}
+		}
+	}
+	.container {
+		@extend %container;
+		height: 100%;
+	}
+	.statistics {
+		display: none;
+		
+		@media (min-width: 600px) and (min-height: 600px) {
+			display: block;
+			float: right;
+			width: 140px;
+			height: 100%;
+			margin-left: 4%;
+			padding: 4% 0;
+			
+			@media (min-height: 700px) {
+				padding: 8% 0;
+			}
+
+			.statistic {
+				height: 25%;
+
+				.icon {
+					display: block;
+					width: 48px;
+					height: 48px;
+					margin: 0 auto 10px;
+				}
+				.number {
+					font-size: 1.5rem;
+					font-weight: bold;
+					text-align: center;
+					color: #fff;
+				}
+			}
+		}
+	}
+	.chat {
+		height: 100%;
+		overflow: hidden;
+		font-size: 1.4rem;
+
+		@media (min-height: 500px) {
+		padding-bottom: 4%;
+		}
+		@media (min-height: 700px) {
+			padding: 8% 0;
+		}
+
+		.messages {
+			background-color: #fff;
+			height: calc(100% - 55px);
+			overflow-y: auto;
+			line-height: 1.8;
+			padding: 4%;
+
+			@media (min-height: 700px) {
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+			}
+
+			.message{
+				&.robot {
+					font-weight: bold;
+
+					.text {
+						color: #286AB0;
+					}
+				}
+				.author {
+					margin-right: 5px;
+					color: #bbb;
+					font-style: italic;
+				}
+			}
+		}
+		.input {
+			position: relative;
+			
+			.text-box {
+				width: 100%;
+				height: 50px;
+				margin-top: 5px;
+				padding: 0 20px;
+				border: 0;
+				outline: 0;
+
+				@media (min-height: 500px) {
+					border-bottom-left-radius: 10px;
+					border-bottom-right-radius: 10px;
+				}
+			}
+			.speech-input {
+				display: none;
+				position: absolute;
+				top: 18px;
+				right: 13px;
+				width: 24px;
+				height: 24px;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+.page {
+	@extend %container;
+	padding: 50px 4%;
+	background-color: #fff;
+	
+	@media (min-width: 1001px) {
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	
+	h1:first-child {
+		margin-top: 0;
+	}
+	p:last-child {
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,46 @@
+function getSnnCookie(cname) {
+    return parseInt(jQuery('#snn-cookies').find('.'+cname).text());
+}
+function delete_cookie(name) {
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/';
+}
+/*
+sin campo email:
+
+boton SUSCRIBE: subscriber_update
+boton UNSUSCRIBE: subscriber_update + unsubscribed
+
+
+con campo email:
+not generating twig cache
+boton SUSCRIBE (nuevo email): subscriber_insert + subscriber_update
+boton SUSCRIBE (email ya suscrito): subscriber_update
+*/
+
+var func1 = function(){
+    var subscriber_insert = getSnnCookie('subscriber_insert');
+    var subscriber_update = getSnnCookie('subscriber_update');
+    var unsubscribed = getSnnCookie('unsubscribed');
+
+    if (subscriber_update){
+        if (unsubscribed) {
+            alert('¡Te desuscribiste!');
+        } else {
+            if (subscriber_insert) {
+               alert('¡Ahora te vas a enterar de todas nuestras novedades!');
+            } else {
+    	       alert('¡Ya estás suscripto!');
+            }
+        }
+    	
+        delete_cookie('subscriber_insert');
+        delete_cookie('subscriber_update');
+        delete_cookie('unsubscribed');
+    }
+};
+
+if(window.addEventListener){
+  window.addEventListener('load', func1)
+}else{
+  window.attachEvent('onload', func1)
+};

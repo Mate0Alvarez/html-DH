@@ -1,0 +1,58 @@
+jQuery(function(){
+
+  var wheight = jQuery(window).height(); //get the height of the window
+  jQuery('.carousel-inner').css('height', wheight); //set to window tallness
+  // console.log('rest');
+  //replace IMG inside carousels with a background image
+
+  jQuery('#block-responsiveslideshow .item img').each(function() {
+    var imgSrc = jQuery(this).attr('src');
+    jQuery(this).parent().css({'background-image': 'url('+imgSrc+')'});
+    jQuery(this).remove();
+  });
+
+  jQuery('.cuadricula .bk-cuadricula img').each(function() {
+    var imgSrc = jQuery(this).attr('src');
+    jQuery(this).parent().css({'background-image': 'url('+imgSrc+')'});
+    jQuery(this).remove();
+  });
+
+  jQuery('.jcarousel-container-horizontal li a img').each(function() {
+    var imgSrc = jQuery(this).attr('src');
+    jQuery(this).parent().css({'background-image': 'url('+imgSrc+')'});
+    jQuery(this).remove();
+  });
+
+  jQuery('.bk-mas-noticias a img').each(function() {
+    var imgSrc = jQuery(this).attr('src');
+    jQuery(this).parent().css({'background-image': 'url('+imgSrc+')'});
+    jQuery(this).remove();
+  });
+
+  jQuery('.region-footer-top .grilla-item .header a img').each(function() {
+    var imgSrc = jQuery(this).attr('src');
+    jQuery(this).parent().css({'background-image': 'url('+imgSrc+')'});
+    jQuery(this).remove();
+  });
+
+  jQuery('#block-planetario-content .field--name-field-tickets-imagen img').each(function() {
+    var imgSrc = jQuery(this).attr('src');
+    jQuery(this).parent().css({'background-image': 'url('+imgSrc+')'});
+    jQuery(this).remove();
+  });
+
+  jQuery('.main-container.nosotros .galeria .field-content > .flex-item img').each(function() {
+    var imgSrc = jQuery(this).attr('src');
+    jQuery(this).parent().css({'background-image': 'url('+imgSrc+')'});
+    jQuery(this).remove();
+  });
+
+  //adjust height of .fullheight elements on window resize
+  jQuery(window).resize(function() {
+    wheight = jQuery(window).height(); //get the height of the window
+    jQuery('.carousel-inner').css('height', wheight); //set to window tallness
+  });
+
+
+
+});

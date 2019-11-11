@@ -1,0 +1,11 @@
+/vendor/
+/nbproject/
+*.scssc
+/application/config/
+/application/cache/*
+!/application/cache/.gitignore
+/application/logs/*
+!/application/logs/.gitignore
+/public/components/
+/public/css/*
+!/public/css/.gitignore
