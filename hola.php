@@ -6,15 +6,14 @@ function buscarRespuesta(PDO $db) {
 $buscador= $_POST["pregunta"];
 $conec=$db->prepare("SELECT respuesta from preguntas where pregunta like '%$buscador%'");
   $conec->execute();
-  $res= $conec->fetch(PDO::FETCH_ASSOC);
-  if($res === ""){
-    $respuestaDefault="Puede que no estamos preparados para responder eso, pero seguro nuestros colegas del Planetario sí! ¿Querés que te contemos acerca de los próximos eventos?";
-    return $respuestaDefault;
+  $res= $conec->fetchAll(PDO::FETCH_ASSOC);
+  if($res != null){
+    return $res;
   } else {
-  return $res;
+    $respuestaDefault=[["respuesta"=>"Puede no te estemos entendiendo o no estamos preparados para responder eso, pero seguro nuestros colegas del Planetario sí!"]];
+    return $respuestaDefault;
 }}
-$pregunta="Hola! Nosotros somos GALyLEO ¿En qué podemos ayudarte?";
-$respuesta="   ";
+$pregunta1="Hola! Nosotros somos GAL y LEO ¿En qué podemos ayudarte?";
 $respuestaBase="
 ¿Te gustaría conocer más? ¡Visitanos!
 ¿Te contamos acerca de los próximos eventos?";
@@ -22,7 +21,7 @@ $respuestaBase="
 if ($_POST) {
 
   $res=buscarRespuesta($dataBase);
-  $respuesta=$res["respuesta"];
+  $respuesta=$res[0]["respuesta"].$respuestaBase;
   $pregunta=$_POST["pregunta"];;
 
  }
@@ -34,23 +33,42 @@ if ($_POST) {
     <meta charset="utf-8">
     <title>BOT</title>
     <link rel="stylesheet" href="CSS/gal.css">
+    <link rel="stylesheet" href="CSS/fontawesome/css/all.css">
   </head>
   <body>
-    <form class="" action="hola.php" method="post">
-      <div class="pregunta">
-        <h3><?=$pregunta?><br></h3>
-      </div>
-      <div class="respuesta">
-          <h3><?=$respuesta?><br></h3>
-      </div>
+    <div class="chatbot">
+      <div class="chatlogs">
+        <div class="chat galyleo">
+          <div class="user-photo"><img src="IMG/galyleo.jpg" alt=""></div>
+          <p class="chat-mensaje"><?=$pregunta1?></p>
+        </div>
 
-          <input type="text" name="pregunta" value="">
-          <br>
+        <?php if($_POST){
+           ?><div class="chat usuario">
+                <div class="user-photo"><img src="IMG/usuario.png" alt=""></div>
+                <p class="chat-mensaje"><?=$_POST["pregunta"]?></p>
+              </div>
+              <div class="chat galyleo">
+                <div class="user-photo"><img src="IMG/galyleo.jpg" alt=""></div>
+                <p class="chat-mensaje"><?=$respuesta?></p>
+              </div>
+              <?php
+        } ?>
+      </div>
+      <div class="chat-form">
+        <form class="" action="hola.php" method="post">
 
-          <input type="submit" name="" value="enviar">
-    </form>
+
+        <textarea id="mensaje" name="pregunta"></textarea>
+        <button type="submit" name="button" for="mensaje"><i class="fas fa-chevron-circle-right"></i></button>
+        </form>
+      </div>
+    </div>
     <div class="astros">
-      <img src="IMG/galyleo.jpg" alt="">
+      <img src="IMG/galyleo2.png" alt="">
+    </div>
+    <div class="planetario">
+      <img src="IMG/planetario.png" alt="">
     </div>
   </body>
 </html>

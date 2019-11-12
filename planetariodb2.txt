@@ -1,0 +1,80 @@
+CREATE TABLE preguntas(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    pregunta varchar(1000),
+    respuesta varchar(1000)
+    );
+    
+INSERT into preguntas (pregunta,respuesta)
+values('hola','Hola! Nosotros somos GALyLEO En que podemos ayudarte?'),('si','Martes a viernes <br>
+<br>
+13.00 hs. De la Tierra al Universo ATP <br>
+17.00 hs. Sol #Tiempo de eclipses (+9 años) <br>
+<br>
+Sabados, domingos y feriados<br>
+<br>
+13.30 hs. De la Tierra al Universo ATP<br> 
+14.30 hs. Somos estrellas (+9 años) <br>
+15.30 hs. Cuentos para no dormir (+3 años) <br> 
+16.30 hs. Sol #Tiempo de eclipses ATP <br>
+17.30 hs. Cuentos para no dormir (+3 años) <br>
+18.30 hs. Somos estrellas (+9 años) <br> 
+19.30 hs. Sol #Tiempo de eclipses ATP <br>'),('Espectaculos','Martes a viernes <br>
+<br>
+13.00 hs. De la Tierra al Universo ATP <br>
+17.00 hs. Sol #Tiempo de eclipses (+9 años) <br>
+<br>
+Sabados, domingos y feriados<br>
+<br>
+13.30 hs. De la Tierra al Universo ATP<br> 
+14.30 hs. Somos estrellas (+9 años) <br>
+15.30 hs. Cuentos para no dormir (+3 años) <br> 
+16.30 hs. Sol #Tiempo de eclipses ATP <br>
+17.30 hs. Cuentos para no dormir (+3 años) <br>
+18.30 hs. Somos estrellas (+9 años) <br> 
+19.30 hs. Sol #Tiempo de eclipses ATP <br>'),('dias y horarios','Buscabas algun espectaculo en particular?<br>'),('como estan?','Bien y vos?<br>'),
+('apellidos','alvarez, alvalos, carretero, corradini, yudhak<br>'),
+('Soñaban con ser astronauta desde chicos?','Claro! Nos dimos cuenta de que queríamos ser astronautas cuando éramos muy jóvenes. ¡Nos estaban programando y lo supimos! <br>'),
+('Es difícil convertirse en astronauta?','Para nada! Sólo tenés que venir al Planetario de Buenos Aires y sentir lo que es ser un verdadero astronauta. <br>'),
+('Qué se siente estar en el espacio?','Estar en el espacio es algo que todos deberían vivir, te cambia la forma de pensar.<br> '),
+('Qué necesita un joven para convertirse en astronauta?','Estudiar, entrenamiento físico, visitar el Planetario de Buenos Aires, entre otras cosas. <br>'),
+('Pueden volar los pájaros en el espacio?','No. <br>'),
+('Tiene final el espacio?','Asumimos que no, pero en realidad nadie lo sabe. <br>'),
+('¿Cómo se creó el espacio?','Según la teoría actual, en una gran explosión llamada Big Bang. <br>'),
+('Cuánto pesa un transbordador espacial?','2.041 toneladas métricas (2.041.065 kilos) en el despegue. <br>'),
+('¿Se pueden ver las estrellas desde el espacio?','Sí.<br>'),
+('A qué velocidad se mueve la estación espacial Internacional?','28.163 km/h.<br>'),
+('temperatura en el espacio exterior','-270 grados Celsius, pero no significa mucho porque es en vacío. <br>'),
+('Qué es la zona Ricitos de Oro?','Ricitos de Oro es la zona de habitabilidad alrededor de una estrella en la que la temperatura no es ni muy caliente ni muy fría. Se llama así en honor al cuento.<br> '),
+('Qué hay en la órbita terrestre?','La Luna, la Estación Espacial Internacional y alrededor de 1.700 satélites.<br> '),
+('Cuánto tiempo se tarda en dar una vuelta completa a la Tierra?','Depende de la altura, la Luna da una vuelta completa cada 27 días, la ISS cada 90 minutos. <br>'),
+('¿Por qué Marte se llama así','En honor del dios griego de la guerra, Marte, probablemente por su tonalidad rojiza. Los romanos nombraron los cinco planetas más brillantes con los nombres de sus dioses. <br>'),
+('Qué es un cosmonauta?','Un astronauta ruso. <br>'),
+('Se envejece en el espacio?','Sí, pero un poco más lento que en la Tierra. <br>'),
+('Qué es una sonda espacial','Un vehículo no tripulado que recorre el espacio recopilando datos y envía esos datos de vuelta a la Tierra para su estudio. <br>'),
+('Marte tiene gravedad','Sí, pero solo un 38% de la terrestre. <br>'),
+('A qué velocidad máxima puede ir un transbordador espacial?','28.163 km/h (la misma que la ISS)<br>'),
+('Qué es el espacio-tiempo?','Una medida teórica que interpreta las tras dimensiones que vemos en el espacio más una cuarta flecha que representa el tiempo.<br>'),
+('Podemos vivir en Marte?', 'No tal cual. Hace falta un soporte vital adecuado para resistir sus condiciones hostiles. <br>'),
+('A qué distancia está el espacio?','Si lo medimos desde la superficie terrestre a nivel del mar comienza a unos 100 km de altura. <br>'),
+('Por qué el espacio es negro?','Porque nuestra vista no es lo bastante aguda como para ver la luz de fondo. <br>'),
+('Quién fue la primera mujer en el espacio?','Valentina Tereshkova.<br> '),
+('Dónde está el cinturón de asteroides?','Entre las órbitas de Marte y Júpiter. <br>'),
+('Cuándo se descubrió Marte?','No se sabe, los astrónomos babilonios ya lo conocían en el año 400 antes de Cristo.<br>'),
+('Qué es una órbita?', 'La trayectoria circular de un objeto al moverse alrededor de un planeta o estrella. <br>'),
+('Se puede ver la Gran Muralla China desde el espacio a simple vista?','No, es un mito. <br>'),
+('Se puede ver Marte desde la Tierra?','Sí, pero solo de noche. Su brillo depende de la fecha. <br>'),
+('Marte tiene atmósfera?','Sí, pero no es respirable para el ser humano.<br> '),
+('Quién fue el primer ser humano en llegar al espacio','Yuri Gagarin.<br> '),
+('Cuánto se tarda en llegar al espacio?','Depende de la nave. Unos 9 minutos a bordo de un transbordador. Los Falcon 9 de SpaceX tardan 10.<br> '),
+('Dónde está la Estación Espacial Internacional?','Constantemente en movimiento sobre la órbita terrestre. '),
+('Cuánto dura un año marciano?','687 días terrestres. <br>'),
+('Es Marte más grande que la Tierra?','No.<br> '),
+('Por qué Marte es rojo?','Por el óxido de hierro que cubre su superficie. <br>'),
+('Es el espacio un vacío?','El vacío perfecto no existe, pero el espacio se le acerca mucho. <br>'),
+('Cuál es la temperatura en Marte?','Maxima: 30 Grados Celsius, Minima: -175 Grados Celsius. Media: -62 Grados Celsius. <br>'),
+('Se pueden oír sonidos en el espacio?','El sonido existe en el espacio, pero los seres humanos no pueden oirlo. <br>'),
+('Qué es un asteroide','Es un cuerpo rocoso demasiado pequeño para ser un planeta. <br>'),
+('Hay vida en Marte?','No que nosotros sepamos.<br> '),
+('Cuántas lunas tiene Marte?','Dos, Deimos y Fobos.<br>'),
+('Qué significa NASA?','National Aeronautics and Space Administration.<br> '),
+('Cuánto se tarda en llegar a Marte?','Entre seis y nueve meses. El Curiosity Rover tardó 254 días (8,3 meses). <br>');
